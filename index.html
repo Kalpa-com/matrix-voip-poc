@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>VoIP Test</title>
+        <script src="https://github.com/matrix-org/matrix-js-sdk/releases/download/v24.0.0/browser-matrix.js"></script>
+        <script src="matrix-voip.js"></script>
+    </head>
+
+    <body>
+        You can place and receive calls with this example.<br><br>
+
+        <div id="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"><br><br>
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass"><br><br>
+
+            <button id="login" onclick="login()">Login</button><br><br>
+        </div>
+
+        <div id="result"></div>
+
+        <div id="rooms"></div>
+
+        <button id="call">Place Call</button>
+        <button id="answer">Answer Call</button>
+        <button id="hangup">Hangup Call</button>
+
+        <div id="videoBackground" class="video-background">
+            <video class="video-element" id="local"></video>
+            <video class="video-element" id="remote"></video>
+        </div>
+    </body>
+</html>
+
+<style>
+    .video-background {
+        height: 500px;
+        margin: 10px;
+    }
+
+    .video-element {
+        height: 100%;
+    }
+</style>
