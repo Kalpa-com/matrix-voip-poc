@@ -58,12 +58,15 @@ function addListeners(call) {
         const localElement = document.getElementById("local");
 
         if (remoteFeed) {
+            remoteElement.muted = false;
             remoteElement.srcObject = remoteFeed.stream;
+            remoteElement.autoplay = true;
             remoteElement.play();
         }
         if (localFeed) {
             localElement.muted = true;
             localElement.srcObject = localFeed.stream;
+            localElement.autoplay = true;
             localElement.play();
         }
     });
