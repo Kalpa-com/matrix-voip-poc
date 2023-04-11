@@ -3,7 +3,7 @@ const BASE_URL = "https://media-us-staging.kalpa.com";
 
 const client = matrixcs.createClient({
     baseUrl: BASE_URL,
-    deviceId: "someDeviceId"
+    deviceId: Date.now().toString()
 });
 
 window.onload = function () {
